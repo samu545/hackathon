@@ -5,7 +5,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.sql.Timestamp;
-import java.math.BigInteger;
 
 
 /**
@@ -21,7 +20,7 @@ public class CustomerProfile implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PROFILE_NUMBER")
-	private String profileNumber;
+	private long profileNumber;
 
 	private String active;
 
@@ -41,7 +40,7 @@ public class CustomerProfile implements Serializable {
 	private Date dateOfBirth;
 
 	@Column(name="DURATION_IN_MONTH")
-	private BigInteger durationInMonth;
+	private long durationInMonth;
 
 	@Column(name="EARNING_PER_MONTH")
 	private BigDecimal earningPerMonth;
@@ -65,12 +64,12 @@ public class CustomerProfile implements Serializable {
 	private String lastName;
 
 	@Column(name="LOAN_AMOUNT")
-	private BigInteger loanAmount;
+	private long loanAmount;
 
 	@Column(name="LOAN_TYPE")
 	private String loanType;
 
-	private BigInteger mobile;
+	private long mobile;
 
 	@Column(name="POST_CODE")
 	private String postCode;
@@ -80,11 +79,11 @@ public class CustomerProfile implements Serializable {
 	public CustomerProfile() {
 	}
 
-	public String getProfileNumber() {
+	public long getProfileNumber() {
 		return this.profileNumber;
 	}
 
-	public void setProfileNumber(String profileNumber) {
+	public void setProfileNumber(long profileNumber) {
 		this.profileNumber = profileNumber;
 	}
 
@@ -136,11 +135,11 @@ public class CustomerProfile implements Serializable {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public BigInteger getDurationInMonth() {
+	public long getDurationInMonth() {
 		return this.durationInMonth;
 	}
 
-	public void setDurationInMonth(BigInteger durationInMonth) {
+	public void setDurationInMonth(long durationInMonth) {
 		this.durationInMonth = durationInMonth;
 	}
 
@@ -200,11 +199,11 @@ public class CustomerProfile implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public BigInteger getLoanAmount() {
+	public long getLoanAmount() {
 		return this.loanAmount;
 	}
 
-	public void setLoanAmount(BigInteger loanAmount) {
+	public void setLoanAmount(long loanAmount) {
 		this.loanAmount = loanAmount;
 	}
 
@@ -216,11 +215,11 @@ public class CustomerProfile implements Serializable {
 		this.loanType = loanType;
 	}
 
-	public BigInteger getMobile() {
+	public long getMobile() {
 		return this.mobile;
 	}
 
-	public void setMobile(BigInteger mobile) {
+	public void setMobile(long mobile) {
 		this.mobile = mobile;
 	}
 

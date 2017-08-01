@@ -37,9 +37,7 @@ public class LoanQuoteController {
 			throws LoanQuoteException {
 		LOGGER.info("In qyote method, to generate quote for customer");
 		if(request !=  null) {
-			LoanQuoteResponse response = new LoanQuoteResponse();
-			response.setStatus("Success");
-			return response;
+			return loanCalculateService.calculateLoanEligibility(request);
 		} else {
 			throw new LoanQuoteException(MessageCodeEnum.INVALID_REQUEST, "Invalid request");
 		}
